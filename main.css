@@ -1,0 +1,1030 @@
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol
+li{
+    margin: 0;
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container{
+    height: 100%;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* Before-header */
+.before-header {
+height:45px ;
+background: #000;
+
+}
+.before-header-wrapper {
+  height: 100%;
+    display: flex;
+    justify-content: space-between;
+      align-items: center;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #969696;
+}
+.before-header-left {
+    display: flex;
+
+}
+.before-header-left-phone {
+    display: flex;
+}
+.before-header-left-phone a {
+    color: #969696;
+    margin-right: 5px;
+   
+}
+.before-header-left-phone img {
+    margin-right: 16px;
+   height: 15px;
+   width: 15px;
+   
+}
+.before-header-left-text span{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.before-header-right {
+    display: flex ;
+}
+.before-header-right a  {
+    color: #969696;
+  
+}
+.before-header-right img  {
+    color: #969696;
+    margin-right: 15px;
+}
+/* header */
+
+.header{
+    background: #0F0F0F;
+    height: 80px;
+}
+.header-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.burger-menu img{
+  display: none;
+}
+.header-left{
+    display: flex;
+    align-items:center;
+    height: 100%;
+}
+.header-logo {
+    font-family: 'Post No Bills Jaffna';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 54px;
+
+color: #FFFFFF;
+
+}
+.header-right {
+    display: flex;
+    align-items:center;
+    height: 100%;
+}
+.header-right ul{
+    display: flex;
+    align-items:center;
+    height: 100%;
+}
+.header-right ul li{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+text-transform: uppercase;
+color: #969696;
+display: flex;
+align-items:center;
+height: 100%;
+padding: 20px;
+cursor: pointer;
+
+}
+.header-right ul li:hover{
+    background: #1F1F1F;
+    transition: all ease 0.5s;
+}
+.cart{
+    margin-left:75px ;
+    margin-right: 47px;
+}
+/* Main */
+.main{
+    background: url("img/main-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 810px;
+    position: relative;
+    
+}
+
+
+.overlay{
+    width: 320px;
+    height: 100%;
+    background: rgb(128, 124, 124);
+    position: absolute;
+    opacity: 0.8;
+    transform: translateX(-320px);
+    transition: all ease 0.5s;
+}
+.overlay.active{
+    transform: translateX(0px);
+}
+.overlay-title{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+}
+.overlay ul{
+    margin-top: 40px;
+    padding: 0;
+    text-align: center;
+}
+.overlay ul li{
+    cursor: pointer;
+    font-size: 12px;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.overlay ul li:hover{
+   background: rgb(73, 72, 72);
+   transition: all ease 0.5s;
+}
+.main-wrapper{
+    text-align: -webkit-center;
+    padding-top: 160px;
+}
+.main-logo {
+    height: 320px;
+    width: 320px;
+    font-family: 'Post No Bills Jaffna';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 54px;
+text-align: center;
+border: 2px solid white;
+
+
+color: #FFFFFF;
+}
+.main-logo-text{
+    margin-top: 110px;
+}
+.main-logo-text-line {
+border:1px solid white;
+width: 179px;
+display: flex;
+text-align: center;
+margin-left: 70px;
+  
+}
+.main-text{
+    margin-top: 80px;
+    width: 730px;
+    color:white;
+}
+/* colection */
+.colection{
+    background: #000;
+    color: white;
+    height: 1330px;
+}
+.colection-top {
+    width: 100%;
+    height: 730px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    
+}
+.colection-product {  
+    width: 100%;
+    text-align: -webkit-center;
+    padding-top: 93px;
+}
+.colection-product-line {
+    border-bottom:1px solid white;
+    width:120px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.colection-product-items {
+    display: flex;
+   
+}
+.colection-product-item {
+    margin-right: 50px;
+}
+.colection-item-image {
+    width: 260px;
+    height: 325px;
+    background: #191B1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.colection-item-image img {
+    width: 215px;
+    height: 214px;
+}
+.colection-item-title {
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+color: #FFFFFF;
+margin-bottom: 10px;
+
+}
+.colection-item-price {
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+color: #D0D0D0;
+}
+.new-colection {
+    width: 880px;
+    background-image: url('img/newcolection-bg.png');
+    text-align: -webkit-center;
+}
+.new-colectionline {
+    border-bottom:1px solid white;
+    width:120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.new-colection-text{
+   padding-top: 484px;
+}
+.new-colection-text h1{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.new-colection-text button{
+    background: none;
+    border:1px solid white;
+    width: 138px;
+height: 47px;
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+text-align: center;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+/* Colegtion-bottom */
+.colection-bottom {
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    
+}
+.colection-bottom-img{
+    width: 880px;
+    height: 600px;
+}
+.colection-bottom-info{
+    width: 1040px;
+    text-align: -webkit-center;
+}
+.colection-info{
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    text-align: -webkit-center;
+    width: 470px;
+    margin-top: 100px;
+}
+.colection-info button{
+    background: none;
+    border:1px solid white;
+    width: 311px;
+    height: 47px;
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+text-align: center;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: #FFFFFF;
+margin-top: 60px;
+}
+.colection-info p{
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+}
+/* product */
+.product{
+    background: #000;
+   
+}
+.product-wrapper{
+    padding-top: 100px;
+}
+.brends-header,
+.product-header{
+     text-align: -webkit-center;
+}
+
+.product-header h1{
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 48px;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+ 
+}
+.product-line{
+    border-bottom:1px solid white;
+    width:120px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+   
+}
+.product-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 25px;
+}
+.product-items{
+    padding-bottom: 150px;
+
+}
+.item {
+    margin-right: 25px;
+    margin-bottom: 40px;
+}
+.item-image {
+    width: 260px;
+    height: 325px;
+    background: #191B1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.item-image img {
+    width: 215px;
+    height: 214px;
+}
+.item-title {
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+color: #FFFFFF;
+margin-bottom: 10px;
+
+}
+.item-price {
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+color: #D0D0D0;
+}
+/* Brend */
+.brends{
+    background: #0F0F0F;
+padding-bottom: 75px;
+padding-top: 60px;
+}
+.brends-img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.brends-img img {
+   margin-right: 30px;
+}
+.brends-img  :last-child{
+    margin-right: 0px;
+ }
+.brends-header h1{
+   
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+text-transform: uppercase;
+
+/* white */
+
+color: #FFFFFF;
+    
+}
+/* footer */
+
+.footer{
+    background-image: url('img/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-wrapper{
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.footer-about{
+    margin-right: 30px;
+}
+.footer-about h1{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+color: #FFFFFF;
+text-transform: uppercase;
+margin-bottom: 40px;
+}
+.footer-about p{
+width: 350px;
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+color: #FFFFFF;
+
+}
+.footer-menu h1{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.footer-menu-btns{
+    display: flex;
+flex-wrap: wrap;
+margin-top: 40px;
+}
+.footer-menu-btns a{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #0F0F0F;
+}
+.footer-form h1{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+text-transform: uppercase;
+color: #FFFFFF;
+
+}
+.footer-form p{
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: 37px;
+
+}
+
+.footer-form form input{
+    margin: -5px;
+    outline: none;
+    padding-left: 15px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    background: #000;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    color: #030303;
+}
+.footer-form form input::placeholder{
+    color: #969696;
+}
+.footer-form form button{
+    width: 140px;
+    height: 41px;
+    color: white;
+    background: #0F0F0F;
+    border: none;
+}
+/* After-footer */
+.after-footer{
+    background: #000;
+}
+.after-footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.after-footer-text{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+color: #D0D0D0;
+}
+.after-footer-link{
+    font-family: 'PT Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+text-align: right;
+text-decoration-line: underline;
+color: #D0D0D0;
+}
+
+@media screen    and (min-width:1440px){
+    .container{
+        width: 1170px;
+    }
+    .new-colection{
+        display: block;
+    }
+ 
+    
+}
+@media screen    and (max-width:1439px){
+   .colection-bottom-info{
+        width: 700px;
+    }
+    .header-right ul li:hover{
+        background: #1F1F1F;
+        transition: all ease 0.5s;
+    }
+}
+@media screen    and (max-width:1340px){
+    .container{
+        width: 1170px;
+    }
+    .new-colection{
+        display: none;
+    }
+    .colection-product-items{
+        justify-content: center;
+    }
+    
+    .colection-bottom-info{
+        width: 630px;
+    }
+    .colection-bottom-img img{
+        width: 650px;
+    }
+    .colection-bottom-img{
+        width: 650px;
+    }
+    .colection-bottom-info{
+        width: 550px;
+    }
+    .colection-info{
+        margin: 0;
+    }
+    .header-right ul li:hover{
+        background: #1F1F1F;
+        transition: all ease 0.5s;
+    }
+}
+@media screen    and (max-width:1199px){
+    .container{
+        width: 960px;
+    }
+    .new-colection{
+        display: none;
+    }
+    .colection-bottom-img img{
+        width: 550px;
+    }
+    .colection-bottom-img{
+        width: 550px;
+    }
+    .colection-bottom-info{
+        width: 550px;
+    }
+    .colection-info{
+        margin: 0;
+    }
+    .footer-form form input{
+        margin-top: 0px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .colection-info button{
+        width: 170px;
+      margin-top: 30px;
+      font-size: 12px;
+    }
+    .colection-info p{
+        width: 400px;
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .colection-info-title{
+        font-size: 14px;
+    }
+    .new-colectionline{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .header-right ul li:hover{
+        background: #1F1F1F;
+        transition: all ease 0.5s;
+    }
+}
+@media screen    and (max-width:991px){
+    .container{
+        width: 720px;
+    }
+    .header-right ul{
+        display: none;
+       
+    }
+    .burger-menu img{
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    .header-right ul li:hover{
+        background: #1F1F1F;
+        transition: all ease 0.5s;
+    }
+    .footer-about{
+        width: 350px;
+    }
+    .footer-about{
+        width: 350px;
+    }
+    .footer-about p{
+        width: 250px;
+    }    .colection-product-item {
+        margin-right: 30px;
+    }
+    .colection-item-image {
+        width: 210px;
+        height: 275px;
+        background: #191B1C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    .colection-item-image img {
+        width: 165px;
+        height: 164px;
+    }
+    .colection-item-title {
+        font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    
+    }
+    .colection-item-price {
+        font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #D0D0D0;
+    }
+    .colection-bottom{
+        text-align: -webkit-center;
+        display: block;
+    }
+    .colection-bottom-img img{
+        width: 450px;
+    }
+    .colection-bottom-img {
+        width: 450px;
+        height: 310px;
+    }
+    .colection-top{
+        height: 650px;
+    }
+    
+   
+}
+@media screen    and (max-width:767px){
+    .container{
+        width: 540px;
+    }
+    .header-right ul li:hover{
+        background: #1F1F1F;
+        transition: all ease 0.5s;
+    }
+    .main-text p{
+        width: 540px;
+    }
+    .main-text {
+        width: 540px;
+    }
+    .footer-about p{
+        width:152px;
+    } 
+    .colection-product-item {
+        margin-right: 30px;
+    }
+    .colection-item-image {
+        width: 140px;
+        height: 205px;
+        background: #191B1C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    .colection-item-image img {
+        width: 95px;
+        height: 94px;
+    }
+    .colection-item-title {
+        font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    
+    }
+    .colection-item-price {
+        font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #D0D0D0;
+    }
+   .colection-bottom-info{
+       width: 458px;
+   }
+   
+
+}
+@media screen    and (max-width:575px){
+    .container{
+        width: 320px;
+        padding: 0 15px;
+    }
+    .header-right ul li:hover{
+        background: #1F1F1F;
+        transition: all ease 0.5s;
+    }
+    .colection-bottom{
+      
+       margin-top: 500px;
+        padding-left: 0px;
+    }
+    .colection-product-items{
+        display: block;
+    }
+    .colection-bottom-img{
+        width: 200px;
+        height: 136px;
+    }
+    .colection-bottom-img img{
+        width: 200px;
+        height: 136px;
+    }
+    .colection-bottom-info{
+        width: 200px;
+    }
+    .colection-info{
+        width: 200px;
+    }
+    .colection-top{
+        padding: 0;
+    }
+    .colection-product-items{
+        margin-left: 30px;
+    }
+    .colection-info p {
+      display:none;
+    }
+    .product{
+        padding-top: 120px;
+    }
+    .new-colectionline{
+        display: none;
+    }
+    .footer-wrapper{
+        display: block;
+    }
+    .footer-about{
+        margin-bottom: 30px;
+    }
+    .footer-form{
+        margin-top: 20px;
+    }
+    .brends-img img{
+        margin-right: 0px;
+    }
+
+    .before-header{
+        height: 60px;
+    }
+    .before-header-left{
+
+        display: block;
+    }
+    .before-header-left-text span{
+        display: none;
+    }
+    .before-header-left-text{
+        width: 150px;
+    }
+    .overlay{
+        width: 320px;
+    }
+    .burger-menu img{
+        width: 20px;
+        height: 20px;
+    }
+    .header-right{
+        width: 100px;
+    }
+    .header-logo{
+        font-size: 24px;
+    }
+
+    .main-logo{
+        height: 250px;
+        width: 250px;
+    }
+    .main-logo-text-line{
+        display: none;
+    }
+    .main-logo-text{
+        margin-top: 60px;
+    }
+    .main-text{
+        width: 270px;
+    }
+    .main-text p{
+        width: 270px;
+    }
+    .footer-about h1{
+        margin-bottom: 15px;
+    }
+    .footer-menu h1{
+        margin-bottom: -15px;
+    }
+    .footer-form h1{
+        margin-bottom: -15px;
+    }
+    .cart{
+        margin-right: 26px;
+    }
+    .header-right{
+        width: 140px;
+    }
+}
